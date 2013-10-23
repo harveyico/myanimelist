@@ -1,4 +1,4 @@
-# Myanimelist
+# MyAnimeList
 An API for http://myanimelist.net for searching animes and mangas up to date!
 For additional documentation, visit: http://myanimelist.net/modules.php?go=api
 ## Installation

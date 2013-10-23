@@ -1,21 +1,23 @@
 # Myanimelist
-
-TODO: Write a gem description
+An API for http://myanimelist.net for searching animes and mangas up to date!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'myanimelist'
+    gem 'myanimelist', '~> 0.0.2'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
     $ gem install myanimelist
 
+### Configuration
+MyAnimeList API requires authentication from the actual site, so you need to sign up first 
+<a href="http://myanimelist.net/register.php">here</a>
 ## Usage
 
 TODO: Write usage instructions here

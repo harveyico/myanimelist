@@ -20,10 +20,8 @@ MyAnimeList API requires authentication from the actual site, so you need to sig
 <a href="http://myanimelist.net/register.php">here</a>
 
 After signing up and verifying your email, you need to assign the username and password on your respective myanimelist API,
-here's what you need to do:
-If you are using 
-#####Rails: 
-make a file named `config/initializers/myanimelist.rb`:
+here's what you need to do, 
+If you are using Rails: setup `config/initializers/myanimelist.rb`:
 ```ruby
 MyAnimeList.configure do |config|
     config.username = "username"

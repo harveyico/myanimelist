@@ -5,7 +5,7 @@ For additional documentation, visit: http://myanimelist.net/modules.php?go=api
 
 Add this line to your application's Gemfile:
 
-    gem 'myanimelist', '~> 0.0.2'
+    gem 'myanimelist', '~> 0.0.3'
 
 And then execute:
 

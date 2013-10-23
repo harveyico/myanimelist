@@ -21,7 +21,9 @@ MyAnimeList API requires authentication from the actual site, so you need to sig
 
 After signing up and verifying your email, you need to assign the username and password on your respective myanimelist API,
 here's what you need to do:
-If you are using #####Rails: setup `config/initializers/myanimelist.rb`:
+If you are using 
+#####Rails: 
+make a file named `config/initializers/myanimelist.rb`:
 ```ruby
 MyAnimeList.configure do |config|
     config.username = "username"
@@ -40,6 +42,7 @@ If you are not using rails make sure to set this up before you can start searchi
     MyAnimeList.search_manga("Manga name here.")
 ```
 
+Simple isn't it?
 
 ## Contributing
 

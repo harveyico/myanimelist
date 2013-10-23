@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['godstrikerharvey@gmail.com']
   spec.description   = %q{The API for MyAnimeList.net}
   spec.summary       = %q{This gem will helps you to make your life easier and better :)}
-  spec.homepage      = 'http://myanimelist.net'
+  spec.homepage      = 'https://github.com/sanzo12/myanimelist'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)

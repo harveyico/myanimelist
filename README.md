@@ -1,6 +1,6 @@
 # Myanimelist
 An API for http://myanimelist.net for searching animes and mangas up to date!
-
+For additional documentation, visit: http://myanimelist.net/modules.php?go=api
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -51,4 +51,4 @@ Simple isn't it?
 5. Create new Pull Request
 
 
-## That's it, Thanks and have fun :)
+## Special Thanks for http://myanimelist.net, That's it, Thanks and have fun :)

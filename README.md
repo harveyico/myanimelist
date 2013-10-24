@@ -61,11 +61,7 @@ Simple isn't it?
             "start_date"=>"2009-10-12", 
             "end_date"=>"2013-03-30", 
             "synopsis"=>
-                  "Set in an imaginary world, the Earth Land, there exists a Mage Guild called \"Fairy Tail\". 
-                  Fairy Tail is stationed in the town Magnolia, residing in the Kingdom of Fiore, and is currently governed by Makarov, Guild's master. 
-                  <br />\n<br />\nLucy Heartfilia, a 17-year-old girl, wishes to become a full-fledged mage and join one of the most prestigious Mage Guilds in the world, 
-                  Fairy Tail. <br />\n<br />\nOne day, out of pure coincidence, she meets Natsu Dragneel, a boy who is transportation-sick, but very cheerful in nature. 
-                  However, the thing she does not know is that Natsu is the closest connection to Fairy Tail, as he is a Mage in Fairy Tail.", 
+                  "Set in an imaginary world, the Earth Land, there exists a Mage Guild called Fairy Tail...", 
             "image"=>"http://cdn.myanimelist.net/images/anime/5/18179.jpg"}
         }]
        }

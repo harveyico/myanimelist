@@ -22,7 +22,12 @@ module MyAnimeList
     end
 
     def parse_xml(response)
-      Hash.from_xml response
+      serialize Hash.from_xml response
+    end
+
+    def serialize(data)
+      result = MyAnimeList::Serializer.new data, 'anime'
+      result.fetch
     end
 
   end

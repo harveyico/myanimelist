@@ -4,6 +4,7 @@ require 'active_support/core_ext/hash'
 require 'myanimelist/anime'
 require 'myanimelist/manga'
 require 'myanimelist/credentials'
+require 'myanimelist/serializer'
 
 module MyAnimeList
   def self.configure(&block)

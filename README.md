@@ -1,11 +1,11 @@
-# Myanimelist
+# MyAnimeList
 An API for http://myanimelist.net for searching animes and mangas up to date!
 For additional documentation, visit: http://myanimelist.net/modules.php?go=api
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'myanimelist', '~> 0.0.2'
+    gem 'myanimelist', '~> 0.0.3'
 
 And then execute:
 
@@ -41,6 +41,31 @@ If you are not using rails make sure to set this up before you can start searchi
 ```
 
 Simple isn't it?
+
+##Example
+```ruby
+    MyAnimeList.search_anime('Fairy Tail')
+    
+    #will result to the followinghash
+    
+    => {"anime"=>
+         {"entry"=>
+          [{"id"=>"6702", 
+            "title"=>"Fairy Tail", 
+            "english"=>nil, 
+            "synonyms"=>nil, 
+            "episodes"=>"175", 
+            "score"=>"8.57", 
+            "type"=>"TV", 
+            "status"=>"Finished Airing", 
+            "start_date"=>"2009-10-12", 
+            "end_date"=>"2013-03-30", 
+            "synopsis"=>
+                  "Set in an imaginary world, the Earth Land, there exists a Mage Guild called Fairy Tail...", 
+            "image"=>"http://cdn.myanimelist.net/images/anime/5/18179.jpg"}
+        }]
+       }
+```
 
 ## Contributing
 

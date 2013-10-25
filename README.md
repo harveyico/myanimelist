@@ -5,7 +5,7 @@ For additional documentation, visit: http://myanimelist.net/modules.php?go=api
 
 Add this line to your application's Gemfile:
 
-    gem 'myanimelist', '~> 0.0.3'
+    gem 'myanimelist', '~> 0.0.5'
 
 And then execute:
 
@@ -48,9 +48,7 @@ Simple isn't it?
     
     #will result to the followinghash
     
-    => {"anime"=>
-         {"entry"=>
-          [{"id"=>"6702", 
+    =>   [{"id"=>"6702", 
             "title"=>"Fairy Tail", 
             "english"=>nil, 
             "synonyms"=>nil, 
@@ -64,7 +62,7 @@ Simple isn't it?
                   "Set in an imaginary world, the Earth Land, there exists a Mage Guild called Fairy Tail...", 
             "image"=>"http://cdn.myanimelist.net/images/anime/5/18179.jpg"}
         }]
-       }
+
 ```
 
 ## Contributing

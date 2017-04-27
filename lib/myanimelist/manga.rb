@@ -1,7 +1,7 @@
 module MyAnimeList
   class Manga < Api
-    def search(name)
-      query('manga', type)
+    def self.search(name)
+      query('manga', name)
     end
   end
 end

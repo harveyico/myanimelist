@@ -16,11 +16,11 @@ Or install it yourself as:
     $ gem install myanimelist
 
 ### Configuration
-MyAnimeList API requires authentication from the actual site, so you need to sign up first 
+MyAnimeList API requires authentication from the actual site, so you need to sign up first
 <a href="http://myanimelist.net/register.php">here</a>
 
 After signing up and verifying your email, you need to assign the username and password on your respective myanimelist API,
-here's what you need to do, 
+here's what you need to do,
 If you are using Rails: setup `config/initializers/myanimelist.rb`:
 ```ruby
 MyAnimeList.configure do |config|
@@ -45,21 +45,21 @@ Simple isn't it?
 ##Example
 ```ruby
     MyAnimeList.search_anime('Fairy Tail')
-    
+
     #will result to the followinghash
-    
-    =>   [{"id"=>"6702", 
-            "title"=>"Fairy Tail", 
-            "english"=>nil, 
-            "synonyms"=>nil, 
-            "episodes"=>"175", 
-            "score"=>"8.57", 
-            "type"=>"TV", 
-            "status"=>"Finished Airing", 
-            "start_date"=>"2009-10-12", 
-            "end_date"=>"2013-03-30", 
+
+    =>   [{"id"=>"6702",
+            "title"=>"Fairy Tail",
+            "english"=>nil,
+            "synonyms"=>nil,
+            "episodes"=>"175",
+            "score"=>"8.57",
+            "type"=>"TV",
+            "status"=>"Finished Airing",
+            "start_date"=>"2009-10-12",
+            "end_date"=>"2013-03-30",
             "synopsis"=>
-                  "Set in an imaginary world, the Earth Land, there exists a Mage Guild called Fairy Tail...", 
+                  "Set in an imaginary world, the Earth Land, there exists a Mage Guild called Fairy Tail...",
             "image"=>"http://cdn.myanimelist.net/images/anime/5/18179.jpg"}
         }]
 
@@ -74,4 +74,9 @@ Simple isn't it?
 5. Create new Pull Request
 
 
-## Special Thanks for http://myanimelist.net, That's it, Thanks and have fun :)
+## Thanks
+[MyAnimeList](myanimelist.net) for the API.
+
+**myanimelist** © 2013+, Harvey Ico. Released under the [MIT](http://mit-license.org/) License.
+
+Authored and maintained by Harvey Ico with help from contributors ([list](https://github.com/harveyico/myanimelist/contributors)).

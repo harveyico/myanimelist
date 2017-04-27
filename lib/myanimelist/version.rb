@@ -1,3 +1,3 @@
-module Myanimelist
-  VERSION = '0.0.6'
+module MyAnimeList
+  VERSION = '0.0.7'
 end

@@ -5,7 +5,7 @@ require 'myanimelist/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'myanimelist'
-  spec.version       = Myanimelist::VERSION
+  spec.version       = MyAnimeList::VERSION
   spec.authors       = ['Harvey Ico']
   spec.email         = ['godstrikerharvey@gmail.com']
   spec.description   = %q{The API for MyAnimeList.net}
@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.3'
-  spec.add_development_dependency 'rake'
-  spec.add_dependency 'rest-client'
-  spec.add_dependency 'activesupport'
+  spec.add_development_dependency 'bundler', '1.3'
+  spec.add_development_dependency 'rake', '12.0.0'
+  spec.add_dependency 'rest-client', '2.0.2'
+  spec.add_dependency 'xml-simple', '1.1.5'
 end

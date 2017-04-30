@@ -25,4 +25,13 @@ module MyAnimeList
     manga = Manga.new(username: @myanimelist_username, password: @myanimelist_password)
     manga.search name
   end
+
+  def self.verify_credentials(username=@myanimelist_username, password=@myanimelist_password)
+    credentials = Credentials.new(username: username, password: password)
+    begin
+      credentials.get_verify_credentials
+    rescue RestClient::Unauthorized => e
+      nil
+    end
+  end
 end

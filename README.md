@@ -31,13 +31,22 @@ end
 If you are not using rails make sure to set this up before you can start searching.
 
 ## Usage
-#####For Anime:
+####For Anime:
 ```ruby
     MyAnimeList.search_anime("Anime name here.")
 ```
 ####For Manga:
 ```ruby
     MyAnimeList.search_manga("Manga name here.")
+```
+
+####To verify credentials:
+```ruby
+if MyAnimeList.verify_credentials
+  puts 'Ok!'
+else
+  puts 'Wrong username and/or password'
+end
 ```
 
 Simple isn't it?

@@ -6,7 +6,7 @@ module MyAnimeList
     def search(type, name)
       body = request("#{BASE_URL}/#{type}/search.xml?q=#{CGI::escape name}")
 
-      Serializer.new(body).call
+      Serializer.new(body).entry
     end
 
     def add(type, id, params = {})
@@ -19,6 +19,12 @@ module MyAnimeList
 
     def remove(type, id)
       request("#{BASE_URL}/#{type}list/delete/#{id}.xml") == 'Deleted'
+    end
+
+    def verify_credentials!
+      body = request("#{BASE_URL}/account/verify_credentials.xml")
+
+      Serializer.new(body).call
     end
 
     private

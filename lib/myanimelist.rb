@@ -1,6 +1,7 @@
+require 'rest-client'
+require 'xmlsimple'
 require 'myanimelist/version'
-require 'rest_client'
-require 'active_support/core_ext/hash'
+require 'myanimelist/api'
 require 'myanimelist/anime'
 require 'myanimelist/manga'
 require 'myanimelist/credentials'
@@ -8,21 +9,18 @@ require 'myanimelist/serializer'
 
 module MyAnimeList
   def self.configure(&block)
-    credentials = Credentials.new
-    block.call(credentials)
-    @myanimelist_username = credentials.username
-    @myanimelist_password = credentials.password
+    block.call(Credentials) if block_given?
+  end
 
-    true if block_given?
+  def self.verify_credentials
+    Api.new.verify_credentials!
   end
 
   def self.search_anime(name)
-    animes = Anime.new(username: @myanimelist_username, password: @myanimelist_password)
-    animes.search name
+    MyAnimeList::Anime.search(name)
   end
 
   def self.search_manga(name)
-    manga = Manga.new(username: @myanimelist_username, password: @myanimelist_password)
-    manga.search name
+    MyAnimeList::Manga.search(name)
   end
 end

@@ -1,34 +1,19 @@
 module MyAnimeList
   class Anime
-
-    def initialize(options={})
-      @myanimelist_username = options[:username]
-      @myanimelist_password = options[:password]
+    def self.search(name)
+      Api.new.search('anime', name)
     end
 
-    def search(name)
-      get_search(name)
+    def self.add(id, params = {})
+      Api.new.add('anime', id,  params)
     end
 
-    def get_search(name)
-      response = RestClient::Request.new(
-        method: :get,
-        url: "https://myanimelist.net/api/anime/search.xml?q=#{CGI::escape name}",
-        user: @myanimelist_username,
-        password: @myanimelist_password,
-        content_type: :xml ).execute
-
-      parse_xml response
+    def self.update(id,  params = {})
+      Api.new.update('anime', id,  params)
     end
 
-    def parse_xml(response)
-      serialize Hash.from_xml response
+    def self.remove(id)
+      Api.new.remove('anime', id)
     end
-
-    def serialize(data)
-      result = MyAnimeList::Serializer.new data, 'anime'
-      result.fetch
-    end
-
   end
 end

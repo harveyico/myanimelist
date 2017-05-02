@@ -1,29 +1,18 @@
 module MyAnimeList
   class Serializer
-    def initialize(data, type)
-      @type = type
-      @animes = data || []
+    attr_accessor :response
+
+    def initialize(resp)
+      @response = resp
     end
 
-    def fetch
-      serialize_data
+    def entry
+      hash = XmlSimple.xml_in(response, force_array: false)
+      hash['entry']
     end
 
-    def serialize_data
-      return @animes if is_array? @animes
-
-      collection = []
-      data = @animes[@type]['entry']
-      if is_array? data
-        collection += data
-      else
-        collection << data
-      end
+    def call
+      XmlSimple.xml_in(response, force_array: false)
     end
-
-    def is_array?(data)
-      data.is_a? Array
-    end
-
   end
 end

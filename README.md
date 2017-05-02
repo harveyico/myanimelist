@@ -1,11 +1,12 @@
 # MyAnimeList
-An API for http://myanimelist.net for searching animes and mangas up to date!
+A gem wrapper for http://myanimelist.net that covers all the methods available on the current API
 For additional documentation, visit: http://myanimelist.net/modules.php?go=api
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'myanimelist', '~> 0.0.6'
+    gem 'myanimelist', '~> 1.0'
 
 And then execute:
 
@@ -16,37 +17,81 @@ Or install it yourself as:
     $ gem install myanimelist
 
 ### Configuration
-MyAnimeList API requires authentication from the actual site, so you need to sign up first
-<a href="http://myanimelist.net/register.php">here</a>
+MyAnimeList API requires authentication from the actual site, so you need to sign up first [here](http://myanimelist.net/register.php).
 
 After signing up and verifying your email, you need to assign the username and password on your respective myanimelist API,
 here's what you need to do,
 If you are using Rails: setup `config/initializers/myanimelist.rb`:
 ```ruby
 MyAnimeList.configure do |config|
-    config.username = "username"
-    config.password = "password"
+    config.username = ENV['username']
+    config.password = ENV['password']
 end
 ```
 If you are not using rails make sure to set this up before you can start searching.
 
 ## Usage
-#####For Anime:
-```ruby
-    MyAnimeList.search_anime("Anime name here.")
+#### Verify Credentials
+Additional step for verifying credentials from myanimelist.
 ```
-####For Manga:
-```ruby
-    MyAnimeList.search_manga("Manga name here.")
+MyAnimeList.verify_crendetials
 ```
 
-Simple isn't it?
+#### Search Anime/Manga
+Returns an Array of Hashes for the result.
+```
+# Anime
+> MyAnimeList.search_anime('Fairy Tail')
+> MyAnimeList::Anime.search('Fairy Tail')
 
-##Example
+# Manga
+> MyAnimeList.search_manga('Fairy Tail')
+> MyAnimeList::Manga.search('Fairy Tail'
+```
+
+#### Add Anime/Manga
+Adds anime/manga on your list. For additional `Anime` parameters, please refer [here](https://myanimelist.net/modules.php?go=api#animevalues). For `Manga`, please refer [here](https://myanimelist.net/modules.php?go=api#mangavalues).
+Just imagine that the xml value would be the key:value pair in ruby, as seen below.
+```
+# Anime
+> MyAnimeList::Anime.add(anime_id, { episode: 1, status: 2 })
+=> true
+
+# Manga
+> MyAnimeList::Manga.add(manga_id, { chapter: 1 })
+=> true
+```
+
+#### Update Anime/Manga
+Updates anime/manga on your list. For additional `Anime` parameters, please refer [here](https://myanimelist.net/modules.php?go=api#animevalues). For `Manga`, please refer [here](https://myanimelist.net/modules.php?go=api#mangavalues).
+Just imagine that the xml value would be the key:value pair in ruby, as seen below.
+```
+# Anime
+> MyAnimeList::Anime.update(anime_id, { episode: 1, status: 2 })
+=> true
+
+# Manga
+> MyAnimeList::Manga.update(manga_id, { chapter: 1 })
+=> true
+```
+
+#### Remove Anime/Manga
+Remove anime/manga on your list.
+```
+# Anime
+> MyAnimeList::Anime.remove(anime_id)
+=> true
+
+# Manga
+> MyAnimeList::Manga.remove(manga_id)
+=> true
+```
+
+## Example
 ```ruby
     MyAnimeList.search_anime('Fairy Tail')
 
-    #will result to the followinghash
+    # will result to the followinghash
 
     =>   [{"id"=>"6702",
             "title"=>"Fairy Tail",

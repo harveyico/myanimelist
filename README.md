@@ -34,7 +34,7 @@ If you are not using rails make sure to set this up before you can start searchi
 #### Verify Credentials
 Additional step for verifying credentials from myanimelist.
 ```
-MyAnimeList.verify_crendetials
+MyAnimeList.verify_credentials
 ```
 
 #### Search Anime/Manga

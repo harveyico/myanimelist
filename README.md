@@ -33,57 +33,57 @@ If you are not using rails make sure to set this up before you can start searchi
 ## Usage
 #### Verify Credentials
 Additional step for verifying credentials from myanimelist.
-```
+```ruby
 MyAnimeList.verify_credentials
 ```
 
 #### Search Anime/Manga
 Returns an Array of Hashes for the result.
-```
+```ruby
 # Anime
-> MyAnimeList.search_anime('Fairy Tail')
-> MyAnimeList::Anime.search('Fairy Tail')
+MyAnimeList.search_anime('Fairy Tail')
+MyAnimeList::Anime.search('Fairy Tail')
 
 # Manga
-> MyAnimeList.search_manga('Fairy Tail')
-> MyAnimeList::Manga.search('Fairy Tail'
+MyAnimeList.search_manga('Fairy Tail')
+MyAnimeList::Manga.search('Fairy Tail'
 ```
 
 #### Add Anime/Manga
 Adds anime/manga on your list. For additional `Anime` parameters, please refer [here](https://myanimelist.net/modules.php?go=api#animevalues). For `Manga`, please refer [here](https://myanimelist.net/modules.php?go=api#mangavalues).
 Just imagine that the xml value would be the key:value pair in ruby, as seen below.
-```
+```ruby
 # Anime
-> MyAnimeList::Anime.add(anime_id, { episode: 1, status: 2 })
+MyAnimeList::Anime.add(anime_id, { episode: 1, status: 2 })
 => true
 
 # Manga
-> MyAnimeList::Manga.add(manga_id, { chapter: 1 })
+MyAnimeList::Manga.add(manga_id, { chapter: 1 })
 => true
 ```
 
 #### Update Anime/Manga
 Updates anime/manga on your list. For additional `Anime` parameters, please refer [here](https://myanimelist.net/modules.php?go=api#animevalues). For `Manga`, please refer [here](https://myanimelist.net/modules.php?go=api#mangavalues).
 Just imagine that the xml value would be the key:value pair in ruby, as seen below.
-```
+```ruby
 # Anime
-> MyAnimeList::Anime.update(anime_id, { episode: 1, status: 2 })
+MyAnimeList::Anime.update(anime_id, { episode: 1, status: 2 })
 => true
 
 # Manga
-> MyAnimeList::Manga.update(manga_id, { chapter: 1 })
+MyAnimeList::Manga.update(manga_id, { chapter: 1 })
 => true
 ```
 
 #### Remove Anime/Manga
 Remove anime/manga on your list.
-```
+```ruby
 # Anime
-> MyAnimeList::Anime.remove(anime_id)
+MyAnimeList::Anime.remove(anime_id)
 => true
 
 # Manga
-> MyAnimeList::Manga.remove(manga_id)
+MyAnimeList::Manga.remove(manga_id)
 => true
 ```
 

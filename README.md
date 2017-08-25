@@ -120,7 +120,7 @@ MyAnimeList::Manga.remove(manga_id)
 
 
 ## Thanks
-[MyAnimeList](myanimelist.net) for the API.
+[MyAnimeList](http://myanimelist.net) for the API.
 
 **myanimelist** © 2013+, Harvey Ico. Released under the [MIT](http://mit-license.org/) License.
 

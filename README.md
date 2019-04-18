@@ -1,3 +1,6 @@
+# DEPRECATED
+This is no longer supported because of myanimelist currently reconstructing their website
+
 # MyAnimeList
 A gem wrapper for http://myanimelist.net that covers all the methods available on the current API
 For additional documentation, visit: http://myanimelist.net/modules.php?go=api
